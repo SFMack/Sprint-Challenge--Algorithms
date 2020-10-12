@@ -99,26 +99,41 @@ class SortingRobot:
         # Fill this out
         
         # if the robot is holding nothing
+        if self.compare_item() == None:
             # move one space to the right
-            # swap the items. now the robot is holding a new item
+            self.move_right()    
+            # swap the items. now the robot is holding a new item 
+            self.swap_item()
             # move one space to the left. now we're back at the beginning
-        
-        # while we are able to move right
-            # if the item being held is less than the current item
-                # swap them
-            # elif we are returning none
-                # swap the current item with whats in the robots hand
-                # move right
-                # swap item
-                # while we are able to move left
-                    # move left
-                # otherwise
-                    # keep moving right
-            
-            # now that we've reached the end 'swap_items' to make sure the list is sorted
-            
-            # end the function. return.
+            self.move_left()
 
+        # while we are able to move right
+        while self.can_move_right():
+            # if the item being held is less than the current item
+            if self.compare_item() == -1:
+                # swap them
+                self.swap_item()
+            # elif we are returning none
+            elif self.compare_item() == None:
+                # swap the current item with whats in the robots hand
+                self.swap_item()
+                # move right
+                self.move_right()
+                # swap item
+                self.swap_item()
+                # while we are able to move left
+                while self.can_move_left():
+                    # move left
+                    self.move_left()
+            # otherwise
+            else:
+                # keep moving right
+                self.move_right()
+        
+        # now that we've reached the end 'swap_items' to make sure the list is sorted 
+        self.swap_item()
+
+        return
 
 if __name__ == "__main__":
     # Test our your implementation from the command line

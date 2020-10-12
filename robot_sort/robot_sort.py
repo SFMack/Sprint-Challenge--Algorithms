@@ -97,7 +97,27 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        
+        # if the robot is holding nothing
+            # move one space to the right
+            # swap the items. now the robot is holding a new item
+            # move one space to the left. now we're back at the beginning
+        
+        # while we are able to move right
+            # if the item being held is less than the current item
+                # swap them
+            # elif we are returning none
+                # swap the current item with whats in the robots hand
+                # move right
+                # swap item
+                # while we are able to move left
+                    # move left
+                # otherwise
+                    # keep moving right
+            
+            # now that we've reached the end 'swap_items' to make sure the list is sorted
+            
+            # end the function. return.
 
 
 if __name__ == "__main__":

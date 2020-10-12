@@ -2,13 +2,13 @@
 
 ## Exercise I
 
-a) 0(n^3) because n is being multiplied three times
+a) O(n^3) because n is being multiplied three times
 
 
-b) 0(n log n) because there are two loops and one is a subset of the other
+b) O(n log n) because there are two loops and one is a subset of the other
 
 
-c) 0(n) because we do exactly one operation for each bunny
+c) O(n) because we do exactly one operation for each bunny
 
 ## Exercise II
 

@@ -2,7 +2,7 @@
 
 ## Exercise I
 
-a) O(n^3) because n is being multiplied three times
+a) O(n) because n is being multiplied three times
 
 
 b) O(n log n) because there are two loops and one is a subset of the other
